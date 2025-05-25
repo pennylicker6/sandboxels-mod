@@ -12,7 +12,7 @@ if (!elements.perfect_coolant) {
     hardness: 1,
     noHeatTransfer: true,
     hidden: false,
+    tool: "fill",
     desc: "The ultimate coolant. Always -100°C, never evaporates or absorbs heat."
   };
 }
-
