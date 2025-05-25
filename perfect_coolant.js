@@ -1,7 +1,17 @@
 if (!elements.perfect_coolant) {
   elements.perfect_coolant = {
     color: "#00e0ff",
-    behavior: behaviors.LIQUID,
+    behavior: [
+      "XX|XX|XX",
+      "XX|CH:perfect_coolant|XX",
+      "XX|XX|XX",
+      function(pixel) {
+        // Override pixel temperature to stay constant at -100°C
+        if (pixel.temp !== -100) {
+          pixel.temp = -100;
+        }
+      }
+    ],
     category: "liquids",
     state: "liquid",
     density: 1000,
